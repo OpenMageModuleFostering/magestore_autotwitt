@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package>
+    <name>magestore_autotwitt</name>
+    <version>0.1.0</version>
+    <stability>stable</stability>
+    <license uri="http://www.opensource.org/licenses/osl-3.0.php">OSL v3.0</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>Auto Twitt</summary>
+    <description>Auto Twitt</description>
+    <notes>Auto Twitt</notes>
+    <authors><author><name>Magestore</name><user>auto-converted</user><email>magestore@gmail.com</email></author></authors>
+    <date>2009-10-01</date>
+    <time>09:35:37</time>
+    <contents><target name="magecommunity"><dir name="Magestore"><dir name="Autotwitt"><dir name="etc"><file name="config.xml" hash="043ee16b2da0648b6778c3fb54b65b78"/><file name="system.xml" hash="fba3a2d5bec941a3e609eb9b9cb6de1c"/></dir><dir name="Helper"><file name="Data.php" hash="1177149d6a763585c7d3e910797f4ba1"/></dir><dir name="Model"><file name="Autotwitt.php" hash="a5e1df790eae3d769a96de5ef64ad220"/></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="Magestore_Autotwitt.xml" hash="f2d821ae029ef8bd53a99ced7cff94df"/></dir></target></contents>
+    <compatible/>
+    <dependencies/>
+</package>

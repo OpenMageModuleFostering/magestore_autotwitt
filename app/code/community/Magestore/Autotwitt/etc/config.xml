@@ -1,0 +1,95 @@
+<?xml version="1.0"?>
+<config>
+    <default>
+		<autotwitt>
+			<general>
+				<enable>1</enable>
+			</general>
+			<site_events>
+				<view_product>1</view_product>
+				<add_to_cart>1</add_to_cart>
+			</site_events>
+		</autotwitt>
+	</default>
+	<modules>
+        <Magestore_Autotwitt>
+            <version>0.1.0</version>
+        </Magestore_Autotwitt>
+    </modules>
+    <frontend>
+        <routers>
+            <autotwitt>
+                <use>standard</use>
+                <args>
+                    <module>Magestore_Autotwitt</module>
+                    <frontName>autotwitt</frontName>
+                </args>
+            </autotwitt>
+        </routers>
+        
+		
+		<events>
+	      <checkout_cart_product_add_after> 
+	        <observers>
+	          <magestore_autotwitt_observer>
+	            <type>singleton</type>
+	            <class>autotwitt/autotwitt</class>
+	            <method>add_product_to_twitter</method>
+	          </magestore_autotwitt_observer>
+	        </observers>
+	      </checkout_cart_product_add_after> 
+		  
+		  <catalog_controller_product_view>
+			<observers>
+	          <magestore_autotwitt_observer>
+	            <type>singleton</type>
+	            <class>autotwitt/autotwitt</class>
+	            <method>add_product_to_twitter</method>
+	          </magestore_autotwitt_observer>
+	        </observers>
+		  </catalog_controller_product_view>
+	    </events>
+    </frontend>
+   
+    <adminhtml>
+		
+		<acl>
+			<resources>
+				<all>
+					<title>Allow Everything</title>
+				</all>
+				<admin>
+					<children>
+						<system>
+                            <children>
+                                <config>
+                                    <children>
+                                        <autotwitt translate="title" >
+                                            <title>Magestore</title>
+                                            <sort_order>50</sort_order>
+                                        </autotwitt>
+                                    </children>
+                                </config>
+                            </children>
+                        </system>
+
+					</children>
+				</admin>
+			</resources>
+		</acl>
+		
+    </adminhtml>   
+    <global>
+        <models>
+            <autotwitt>
+                <class>Magestore_Autotwitt_Model</class>
+                <resourceModel>autotwitt_mysql4</resourceModel>
+            </autotwitt>            
+        </models>    
+		 <helpers>
+            <autotwitt>
+                <class>Magestore_Autotwitt_Helper</class>
+            </autotwitt>
+        </helpers>
+    </global>
+</config>
