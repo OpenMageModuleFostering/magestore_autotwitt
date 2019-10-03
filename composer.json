@@ -1,16 +1,19 @@
 {
-    "name": "OpenMageModuleFostering/magestore_autotwitt",
+    "name": "OpenMageModuleFostering\/magestore_autotwitt",
     "type": "magento-module",
     "license": "OSL-v3.0",
     "homepage": "",
     "description": "Auto Twitt",
     "authors": [
-    {
-        "name": "Magestore",
-        "email": "magestore@gmail.com"
-    }
-],
+        {
+            "name": "Magestore",
+            "email": "magestore@gmail.com"
+        }
+    ],
     "suggest": {
-        "magento-hackathon/magento-composer-installer": "*"
-    }
+        "magento-hackathon\/magento-composer-installer": "*"
+    },
+    "keywords": [
+        "openmage-module"
+    ]
 }
